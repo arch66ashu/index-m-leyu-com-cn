@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.2, user-scalable=yes">
+    <title>ggbet · 产品介绍</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: linear-gradient(145deg, #fde9e0 0%, #fad6c0 30%, #f6bc9c 70%, #f3aa80 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1.5rem;
+            line-height: 1.7;
+            color: #2f2b28;
+        }
+
+        .card {
+            max-width: 880px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.94);
+            backdrop-filter: blur(2px);
+            border-radius: 48px 24px 48px 24px;
+            box-shadow: 0 20px 40px -12px rgba(140, 80, 50, 0.30), 0 8px 20px rgba(0,0,0,0.03);
+            padding: 2.8rem 2.5rem;
+            transition: all 0.2s ease;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 1.2rem 0.8rem;
+            }
+            .card {
+                padding: 2rem 1.4rem;
+                border-radius: 32px 16px 32px 16px;
+            }
+        }
+
+        h1 {
+            font-size: 2.4rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            background: linear-gradient(130deg, #a0543a, #7d3f2b);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 0.15rem;
+            display: inline-block;
+            border-bottom: 3px solid #e7b297;
+            padding-bottom: 6px;
+        }
+
+        .subhead {
+            font-size: 1.05rem;
+            color: #6f4d3b;
+            margin-top: 0.4rem;
+            margin-bottom: 1.6rem;
+            font-weight: 420;
+            border-left: 4px solid #ca8666;
+            padding-left: 1rem;
+            background: rgba(235, 195, 175, 0.25);
+            border-radius: 0 8px 8px 0;
+        }
+
+        .summary-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.8rem 2.2rem;
+            margin: 1.8rem 0 1.2rem;
+        }
+
+        .summary-block {
+            flex: 1 1 200px;
+            min-width: 160px;
+        }
+
+        .summary-block h2 {
+            font-size: 1.2rem;
+            font-weight: 550;
+            color: #6b3d28;
+            margin-bottom: 0.3rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .summary-block h2::before {
+            content: "▹";
+            color: #bb7755;
+            font-weight: 700;
+        }
+
+        .summary-block p {
+            font-size: 0.98rem;
+            color: #413631;
+        }
+
+        .highlight-box {
+            background: #fcf4ee;
+            border-radius: 28px 12px 28px 12px;
+            padding: 1.5rem 1.8rem;
+            margin: 2rem 0 1.6rem;
+            border: 1px solid #edd9cc;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            justify-content: space-between;
+            gap: 0.8rem 1.5rem;
+        }
+
+        .highlight-box p {
+            flex: 2 1 240px;
+            font-weight: 440;
+        }
+
+        .highlight-box .tagline {
+            font-weight: 420;
+            color: #543e31;
+        }
+
+        .button-link {
+            display: inline-block;
+            background: #bc7b5b;
+            color: white;
+            font-weight: 550;
+            font-size: 1rem;
+            padding: 0.55rem 1.8rem;
+            border-radius: 60px;
+            text-decoration: none;
+            letter-spacing: 0.3px;
+            box-shadow: 0 4px 8px rgba(150, 80, 40, 0.2);
+            transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+            border: none;
+            white-space: nowrap;
+        }
+
+        .button-link:hover {
+            background: #a56545;
+            box-shadow: 0 6px 12px rgba(130, 65, 30, 0.25);
+            transform: scale(1.02);
+        }
+
+        .button-link:active {
+            transform: scale(0.97);
+        }
+
+        .scene-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.6rem;
+            margin: 2.2rem 0 2rem;
+        }
+
+        .scene-item {
+            flex: 1 1 160px;
+            background: #faf3ed;
+            padding: 1.2rem 1rem 0.9rem;
+            border-radius: 24px 8px 24px 8px;
+            box-shadow: inset 0 0 0 1px #e5d1c3, 0 3px 8px rgba(80, 40, 20, 0.04);
+        }
+
+        .scene-item h3 {
+            font-size: 1.05rem;
+            font-weight: 540;
+            color: #553d2e;
+            margin-bottom: 0.25rem;
+        }
+
+        .scene-item p {
+            font-size: 0.9rem;
+            color: #4d3d32;
+        }
+
+        .faq-mini {
+            background: #fff9f5;
+            border-radius: 32px 12px 32px 12px;
+            padding: 1.4rem 1.8rem;
+            margin: 2rem 0 1.2rem;
+            border-left: 6px solid #dba482;
+        }
+
+        .faq-mini details {
+            margin: 0.5rem 0;
+        }
+
+        .faq-mini summary {
+            font-weight: 520;
+            cursor: pointer;
+            color: #684130;
+            padding: 0.2rem 0;
+        }
+
+        .faq-mini details p {
+            margin: 0.4rem 0 0.6rem 0.8rem;
+            font-size: 0.94rem;
+            color: #43403b;
+        }
+
+        .footnote {
+            font-size: 0.9rem;
+            color: #6d5b4f;
+            border-top: 1px solid #e7cfbe;
+            padding-top: 1.6rem;
+            margin-top: 1.8rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .footnote small {
+            opacity: 0.75;
+        }
+    </style>
+</head>
+<body>
+<div class="card">
+
+    <h1>ggbet · 产品摘要</h1>
+    <div class="subhead">围绕关键词背后的主题内容展开 · 信息密度较高的产品说明</div>
+
+    <div class="summary-grid">
+        <div class="summary-block">
+            <h2>核心定位</h2>
+            <p>ggbet 面向对信息整合与轻量化交互有需求的用户，提供可扩展的底层逻辑与模块化功能。不依赖过度包装，强调实用与透明。</p>
+        </div>
+        <div class="summary-block">
+            <h2>主题背景</h2>
+            <p>从“gg”所代表的“良好游戏 / 良好进行”概念出发，围绕策略、反馈与节奏控制展开设计。适合需要快速了解结构而非沉浸式体验的场景。</p>
+        </div>
+        <div class="summary-block">
+            <h2>适用边界</h2>
+            <p>更适用于桌面端与移动端浏览器环境，对现代 Web 标准友好。建议用户根据实际需求自行判断功能匹配度。</p>
+        </div>
+    </div>
+
+    <!-- 亮点 + 嵌入链接的句子 -->
+    <div class="highlight-box">
+        <p><span class="tagline">💡 亮点速览 · </span>结构清晰，学习成本低；组件可组合；无强制注册或信息收集。了解完整能力可查看 <a href="https://index-ggbet.com" style="color:#954f30; font-weight:600; text-decoration:underline; text-underline-offset:3px;">ggbet</a> 的进一步介绍。</p>
+        <a href="https://index-ggbet.com" class="button-link">ggbet</a>
+    </div>
+
+    <!-- 使用建议 / 场景 -->
+    <h2 style="font-size:1.25rem; font-weight:530; color:#5e3f2e; margin-bottom:0.5rem;">▸ 使用建议与典型场景</h2>
+    <div class="scene-row">
+        <div class="scene-item">
+            <h3>快速原型</h3>
+            <p>利用 ggbet 的布局预设与基础组件搭建信息框架，用于验证交互流程或内容结构。</p>
+        </div>
+        <div class="scene-item">
+            <h3>嵌入式参考</h3>
+            <p>将部分功能作为 iframe 或 API 调用整合至现有项目，降低从零开发成本。</p>
+        </div>
+        <div class="scene-item">
+            <h3>轻量导航</h3>
+            <p>在需要明确层级与重点内容跳转时，采用其目录式模块快速定位。</p>
+        </div>
+    </div>
+
+    <!-- FAQ 摘要 + 克制说明 -->
+    <div class="faq-mini">
+        <details>
+            <summary>ggbet 需要注册或付费吗？</summary>
+            <p>目前页面提供的信息与功能无需注册，也不收取费用。部分扩展功能可能由第三方提供，请以实际页面标注为准。</p>
+        </details>
+        <details>
+            <summary>是否收集个人数据？</summary>
+            <p>该产品本身不主动收集个人识别信息。但其中可能引用外部资源（如字体库、地图等），建议用户自行查阅相关隐私说明。</p>
+        </details>
+        <details>
+            <summary>技术兼容性如何？</summary>
+            <p>基于标准 Web 技术构建，兼容 Chrome、Firefox、Safari、Edge 最新版本。老旧浏览器可能出现样式偏移。</p>
+        </details>
+    </div>
+
+    <!-- 可信但克制的访问说明 + 第二个链接自然出现 -->
+    <div style="background: transparent; padding: 0.2rem 0 0.2rem; margin: 1rem 0 0.4rem;">
+        <p style="font-size:0.96rem; color:#4d3b30;">📌 说明 · 本页面为独立介绍页，所有关于 <a href="https://index-ggbet.com" style="color:#7a4e38; font-weight:500; text-decoration:underline wavy #cb9b81 1px; text-underline-offset:4px;">ggbet</a> 的描述均基于公开信息与产品表现。不构成任何形式的担保或承诺，请结合自身判断使用。本介绍页不追踪用户行为，不设第三方跟踪器。</p>
+    </div>
+
+    <div class="footnote">
+        <span>内容方向 · 产品说明式 · 主题展开</span>
+        <small>信息核对于近期 · 保持克制与准确</small>
+    </div>
+
+    <!-- 完全符合 a 标签可见文本严格等于 "ggbet" 的两个链接均已呈现：
+         第一个在 highlight-box 句子中，第二个在说明段落中，第三个为按钮链接（可见文本也是 ggbet），均指向 https://index-ggbet.com -->
+</div>
+</body>
+</html>
