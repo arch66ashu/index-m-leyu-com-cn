@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ggbet 信息速查 · 用途与说明</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background: #f8f6f0;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            color: #2e2b27;
+            line-height: 1.7;
+            padding: 2.4rem 1.2rem;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        .page-wrap {
+            background: #fffffffb;
+            border-radius: 28px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+            padding: 2.8rem 2.4rem;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 550;
+            letter-spacing: -0.01em;
+            margin-bottom: 1.6rem;
+            border-left: 5px solid #b7a48b;
+            padding-left: 1.2rem;
+            color: #2a2520;
+        }
+
+        h2 {
+            font-size: 1.35rem;
+            font-weight: 520;
+            margin-top: 2.4rem;
+            margin-bottom: 0.9rem;
+            color: #3b352f;
+            border-bottom: 1px dashed #d6cec0;
+            padding-bottom: 0.25rem;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .intro-highlight {
+            background: #f3efe7;
+            padding: 1.2rem 1.8rem;
+            border-radius: 20px;
+            margin: 1.5rem 0 1.8rem 0;
+            font-size: 1rem;
+            border-left: 4px solid #c1b19b;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin: 1.8rem 0;
+        }
+
+        .info-card {
+            background: #fcfaf7;
+            border: 1px solid #eae3d8;
+            border-radius: 18px;
+            padding: 1.3rem 1.4rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+            transition: box-shadow 0.2s;
+        }
+
+        .info-card:hover {
+            box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+        }
+
+        .info-card .label {
+            font-weight: 530;
+            color: #6b5f51;
+            display: block;
+            font-size: 0.85rem;
+            letter-spacing: 0.3px;
+            margin-bottom: 0.4rem;
+            text-transform: uppercase;
+        }
+
+        .notice-block {
+            background: #f0ece3;
+            border-radius: 18px;
+            padding: 1.2rem 1.6rem;
+            margin: 2rem 0 1.2rem 0;
+            border-left: 4px solid #ae9b84;
+            font-size: 0.96rem;
+        }
+
+        .notice-block strong {
+            color: #3f372f;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0.8rem 0 1.4rem 0;
+        }
+
+        ul li {
+            padding: 0.4rem 0 0.4rem 1.5rem;
+            position: relative;
+            color: #3b352f;
+        }
+
+        ul li::before {
+            content: "•";
+            position: absolute;
+            left: 0.2rem;
+            color: #9b8a75;
+            font-weight: bold;
+        }
+
+        .faq-item {
+            margin: 1.2rem 0 0.8rem 0;
+            border-bottom: 1px solid #e5ddd1;
+            padding-bottom: 0.8rem;
+        }
+
+        .faq-item .q {
+            font-weight: 530;
+            color: #2f2923;
+            display: block;
+            margin-bottom: 0.2rem;
+        }
+
+        .faq-item .a {
+            color: #5a5147;
+            font-size: 0.96rem;
+        }
+
+        a {
+            color: #5f4e3a;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-thickness: 1px;
+            text-decoration-color: #cbbcaa;
+            font-weight: 500;
+            transition: color 0.15s;
+        }
+
+        a:hover {
+            color: #2f261d;
+            text-decoration-color: #8f7b64;
+        }
+
+        .footer-note {
+            margin-top: 2.8rem;
+            font-size: 0.88rem;
+            color: #81786c;
+            border-top: 1px solid #e3dacd;
+            padding-top: 1.6rem;
+            text-align: left;
+        }
+
+        @media (max-width: 640px) {
+            body { padding: 1.2rem 0.8rem; }
+            .page-wrap { padding: 1.8rem 1.2rem; }
+            h1 { font-size: 1.6rem; padding-left: 0.9rem; }
+            .info-grid { grid-template-columns: 1fr; }
+            .intro-highlight { padding: 1rem 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-wrap">
+        <h1>ggbet · 网站用途说明与速查</h1>
+
+        <p>如果你正在寻找一个与 <a href="https://zho-ggbet.com">ggbet</a> 相关的信息入口，这里提供了该平台的基本定位、功能场景与使用提示，帮助你快速判断它是否与你的需求匹配。以下内容基于公开信息整理，保持简洁、中立，不包含主观推荐或诱导。</p>
+
+        <div class="intro-highlight">
+            <strong>一句话定位：</strong>
+            ggbet 是一个面向特定用户群体的在线服务平台，以娱乐竞猜类内容为核心，提供赛事数据、玩法选项及账户管理功能。该页面作为知识库入口，汇总了典型使用场景与注意事项。
+        </div>
+
+        <h2>主要功能区域</h2>
+        <div class="info-grid">
+            <div class="info-card">
+                <span class="label">赛事与玩法</span>
+                覆盖多种体育项目及电子竞技赛事，用户可浏览实时赔率、比赛进程，并选择不同的预测玩法。数据更新频率较高，适合关注赛前动态的用户。
+            </div>
+            <div class="info-card">
+                <span class="label">账户与资金</span>
+                提供注册、登录、充值、提现等基础账户操作。平台支持多种支付方式，资金流转需遵守平台规则及当地法律法规。
+            </div>
+            <div class="info-card">
+                <span class="label">资讯与数据</span>
+                包含赛事统计、历史记录、玩法说明等辅助内容，帮助用户更全面地了解参与项目。部分数据由第三方提供，仅供参考。
+            </div>
+            <div class="info-card">
+                <span class="label">客服与支持</span>
+                设有常见问题解答及在线客服渠道，用户遇到账户、支付或玩法疑问时可自助查询或联系支持团队。
+            </div>
+        </div>
+
+        <h2>典型使用场景</h2>
+        <ul>
+            <li>对体育赛事或电竞赛事有深入了解，希望尝试预测胜负、比分等玩法。</li>
+            <li>需要在一个集中平台查看多个联赛、比赛的实时数据及变化趋势。</li>
+            <li>通过平台内置的资讯模块，快速获取赛事背景、队伍状态等信息。</li>
+            <li>管理个人竞猜记录，回顾历史结果并调整后续策略。</li>
+        </ul>
+
+        <div class="notice-block">
+            <strong>使用提示：</strong> 参与任何预测类活动前，请务必确认你所在地的法律法规是否允许此类行为。<a href="https://zho-ggbet.com">ggbet</a> 平台仅提供技术及信息服务，用户应自行判断风险并理性控制投入。建议定期查看平台规则更新，保持对条款的知情。
+        </div>
+
+        <h2>常见问题摘要</h2>
+        <div class="faq-item">
+            <span class="q">Q：ggbet 是否提供免费体验功能？</span>
+            <span class="a">部分赛事数据、玩法说明及资讯内容可免费浏览；参与实际预测通常需要注册账户并完成充值，具体以平台页面提示为准。</span>
+        </div>
+        <div class="faq-item">
+            <span class="q">Q：平台支持哪些支付方式？</span>
+            <span class="a">常见的线上支付渠道（如银行转账、电子钱包等）在大部分地区可用，具体列表请登录账户后查看「充值」页面的选项。</span>
+        </div>
+        <div class="faq-item">
+            <span class="q">Q：遇到账户异常或疑问如何处理？</span>
+            <span class="a">优先查阅网站底部的「帮助中心」或「常见问题」，若无法解决可通过在线客服或工单系统反馈，通常在工作时段内得到回复。</span>
+        </div>
+
+        <p style="margin-top: 2rem;">如果你希望直接访问该平台并浏览上述功能，可前往 <a href="https://zho-ggbet.com">ggbet</a> 主页查看最新界面与活动。所有操作均应在符合当地法律的前提下进行。</p>
+
+        <div class="footer-note">
+            <span>本页为介绍性知识库入口，内容基于公开信息整理，不构成任何形式的建议或担保。请理性判断，合规使用。</span>
+        </div>
+    </div>
+</body>
+</html>
